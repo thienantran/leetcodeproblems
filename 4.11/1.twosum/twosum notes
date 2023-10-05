@@ -1,0 +1,9 @@
+- Given an array of integers 'nums' and another integer target. Find two distinct moments where the sum of the elements equate to the 'target'. 
+
+-Use a hash table hash_table = {}
+- Store the numberse you've seen so far as keys and their indices as values
+
+-Iterate over the list 
+
+
+https://www.youtube.com/watch?v=KLlXCFG5TnA&t=2s
