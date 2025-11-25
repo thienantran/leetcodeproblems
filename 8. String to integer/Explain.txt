@@ -1,0 +1,55 @@
+1. Skips leading whitespaces 
+'''
+while i < n and s[i] == ' ':
+    i += 1
+'''
+
+Also moves the pointer i past any leading space
+
+2. Handle Empty/All-Space String
+'''
+if i ==n:
+  return 0
+'''
+
+If we've Reach the end after skiping spaces, return 0.
+
+3. Determine sign
+
+'''
+sign = 1
+if s[i] == '+':
+    i += 1
+elif s[i] == '-':
+    i += 1
+    sign = -1
+'''
+
+Checks + or - and records the sign, then moves past.
+
+4. Parse Digits
+
+'''
+parsed = 0
+while i < n:
+    cur = s[i]
+    if not cur.isdigit():
+        break
+    parsed = parsed * 10 + int(cur)
+    i += 1
+'''
+
+Builds the number digit by digit and stops when encounter a non-digit character
+
+5. Apply sign & clamp to 32 bit
+'''
+parsed *= sign
+
+if parsed > 2**31 - 1:
+    return 2**31 - 1
+elif parsed < -2**31:
+    return -2**31
+else:
+    return parsed
+'''
+Applies the sign and clamps to result
