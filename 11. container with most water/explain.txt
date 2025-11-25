@@ -1,0 +1,15 @@
+1. Finding the maximum area formed by two vertical lines and the x-axis 
+Area = min(height[i], height[j]) x (j - i)
+Water height is limited by the shorter line
+width is the distance between the lines
+
+2. Two pointer approach
+Left = 0, right = len(height) - 1
+
+Logic: 
+1. Calculate current area using the shorter line as height
+2. Move the pointer with the shorter height inward
+3. Track the maxium area
+
+
+
